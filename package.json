@@ -1,0 +1,11 @@
+{
+  "name": "wetube-exam",
+  "version": "1.0.0",
+  "description": "wetube-example",
+  "main": "app.js",
+  "author": "park",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
