@@ -7,8 +7,8 @@ const SEARCH = "/search";
 
 // Users
 const USERS = "/users";
-const EDIT_PROFILE = "/edit-profile";
 const USER_DETAIL = "/:id";
+const EDIT_PROFILE = "/edit-profile";
 const CHANGE_PASSWORD = "/change-password";
 const ME = "/me";
 
@@ -27,12 +27,24 @@ const routes = {
   search: SEARCH,
   users: USERS,
   editProfile: EDIT_PROFILE,
-  userDetail: USER_DETAIL,
+  userDetail: id => {
+    if (id) {
+      return `/users/${id}`;
+    } else {
+      return USER_DETAIL;
+    }
+  },
   changePassword: CHANGE_PASSWORD,
   me: ME,
   videos: VIDEOS,
   upload: UPLOAD,
-  videoDetail: VIDEO_DETAIL,
+  videoDetail: id => {
+    if (id) {
+      return `/videos/${id}`;
+    } else {
+      return VIDEO_DETAIL;
+    }
+  },
   editVideo: EDIT_VIDEO,
   deleteVideo: DELETE_VIDEO
 };
